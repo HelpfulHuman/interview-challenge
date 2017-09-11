@@ -58,3 +58,8 @@ Keep track of how much time you spent on the challenge and please spend as much 
 
 - Data
   - Fetch data with GraphQL
+
+
+## Deliverables
+- Link to your repo
+- URL to App (Use a free hosting service of your choice)
