@@ -21,7 +21,7 @@ If you'd like to implement additional functionality, or change the functionality
 ## Time
 Keep track of how much time you spent on the challenge and please spend as much time as you are willing to on this challenge. We know that your time is valuable and also know that doing work without pay is not an ideal scenario.
 
----
+
 ## Core Goals
 - Replicate design
   - [Font](./FONT.md)
@@ -30,7 +30,7 @@ Keep track of how much time you spent on the challenge and please spend as much 
 - Replicate functionality
   -
 - Create and consume color data
----
+
 ## Stretch Goals
 - Design
   - Make it responsive
@@ -38,7 +38,7 @@ Keep track of how much time you spent on the challenge and please spend as much 
   - Generate color list from a script
 - Data
   - Host data on a cloud service
- ---
+
 ## Bonus Stretch Goals
 - Design
   - Include interaction design
