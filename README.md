@@ -5,7 +5,9 @@ Helpful Human's at home proficiency challenge. This challenge gauges applicants'
 This challenge has different milestones.
 
 ## Core
-The core goals should be completed in full.
+Stated briefly, the core goal is to create a simple but functional app that has a data, view and logic layer. The app will display color swatches, and that's about it!
+
+The core goals should be completed in full. 
 
 ## Stretch
 The stretch goals can also be met if you choose to do so. Not completing the stretch goals does not disqualify you in any way nor will it lead to a competitive disadvantage to other applicants.
@@ -28,7 +30,11 @@ Keep track of how much time you spent on the challenge and please spend as much 
   - Styles
   - Iconography
 - Replicate functionality
-- Create and consume color data
+  - Create a database of colors (minimum 100)
+  - Paginate your data to show a certain number of swatches at a time
+  - Display both the color swatch and the label of the color
+  - Ability to select random color and modify view accordingly
+  - Clicking swatch changes to color detail view
 
 ## Stretch Goals
 - Design
@@ -45,6 +51,7 @@ Keep track of how much time you spent on the challenge and please spend as much 
 
 - Functionality
   - Add search functionality
+  - Color generation script guarantees same colors and order
   - Group by color (Make sidebar menu functional)
 
 - Data
