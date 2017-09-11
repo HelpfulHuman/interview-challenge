@@ -28,7 +28,6 @@ Keep track of how much time you spent on the challenge and please spend as much 
   - Styles
   - Iconography
 - Replicate functionality
-  -
 - Create and consume color data
 
 ## Stretch Goals
