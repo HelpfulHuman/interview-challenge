@@ -2,6 +2,8 @@
 
 Helpful Human's at home proficiency challenge. This challenge gauges applicants' knowledge on a number of different metrics that are used in part to determine an applicant's viability. In this repo, you will find the assets that are required to replicate the design that is also included in this repo. Both .sketch documents are available as well as .pngs.
 
+To get started, clone this repo. Add your work to it in whatever structure you prefer, then push it to your own, renamed repo. When you are finish, share the location of your work with us.
+
 This challenge has different milestones.
 
 ## Core
