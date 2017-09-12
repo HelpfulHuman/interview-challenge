@@ -1,8 +1,8 @@
 # Helpful Human Applicant Interview Challenge
 
-Helpful Human's at home proficiency challenge. This challenge gauges applicants' knowledge on a number of different metrics that are used in part to determine an applicant's viability. In this repo, you will find the assets that are required to replicate the design that is also included in this repo. Both .sketch documents are available as well as .pngs.
+Welcome to Helpful Human's at home proficiency challenge! This challenge gauges your knowledge on a few different metrics that we use, in part, to evaluate your skills. In this repo, you will find the assets that are required to replicate the design that is also included in this repo. Both .sketch and .png assets are available.
 
-To get started, clone this repo. Add your work to it in whatever structure you prefer, then push it to your own, renamed repo. When you are finish, share the location of your work with us.
+To get started, clone this repo. Add your work to it in whatever structure you prefer, then push it to your own, renamed repo. When you are finished, follow the instructions at the end of this document.
 
 This challenge has different milestones.
 
@@ -12,18 +12,18 @@ Stated briefly, the core goal is to create a simple but functional app that has 
 The core goals should be completed in full. 
 
 ## Stretch
-The stretch goals can also be met if you choose to do so. Not completing the stretch goals does not disqualify you in any way nor will it lead to a competitive disadvantage to other applicants.
+The stretch goals can also be met if you choose to do so. Not completing the stretch goals does not disqualify you in any way nor will it lead to a disadvantage in comparison to other applicants.
 
 ## Bonus Stretch
 Bonus stretch goals inherit properties of stretch goals but completing these goals will say to us, "I believe the code I've written for the core goals and the stretch goals is production ready".
 
 ## Additional Information
-An applicant completing a very well considered solution to the core challenges is just as meaningful to us as a solution that completes all goals but is not implemented as well.
+An applicant completing a well thought out solution to the core challenges is just as meaningful to us as a solution that completes all goals but is not implemented very well.
 
 If you'd like to implement additional functionality, or change the functionality of this challenge, feel free but be prepared to discuss your reasoning for doing so. We like critical thinking. We don't like improper implementation without reason.
 
 ## Time
-Keep track of how much time you spent on the challenge and please spend as much time as you are willing to on this challenge. We know that your time is valuable and also know that doing work without pay is not an ideal scenario.
+Keep track of how much time you spent on the challenge but also feel free to spend as much time as you want. Your time is very valuable and we are thankful you're taking the time demonstrate your skills for us.
 
 
 ## Core Goals
@@ -43,8 +43,6 @@ Keep track of how much time you spent on the challenge and please spend as much 
   - Make it responsive
 - Functionality
   - Generate color list from a script
-- Data
-  - Host data on a cloud service
 
 ## Bonus Stretch Goals
 - Design
@@ -61,5 +59,11 @@ Keep track of how much time you spent on the challenge and please spend as much 
 
 
 ## Deliverables
+In your email submission via Angel List, please include the following:
 - Link to your repo
 - URL to App (Use a free hosting service of your choice)
+- [Include a Donger](http://dongerlist.com/) that best represents your state of mind when complete
+
+Thanks and we look forward to your submission!
+
+ლ ( ◕  ᗜ  ◕ ) ლ
