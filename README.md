@@ -59,7 +59,7 @@ Keep track of how much time you spent on the challenge but also feel free to spe
 
 
 ## Deliverables
-In your email submission via the address provided by us in your invitation to take this test, please include the following:
+In your email submission response to the test invitation from AngelList, please include the following:
 - Link to your repo
 - URL to your hosted App (Use a free hosting service of your choice)
 - [Include a Donger](http://dongerlist.com/) that best represents your state of mind when complete
