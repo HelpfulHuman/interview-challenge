@@ -1,7 +1,7 @@
 import * as React from "react";
-import {Header, Main} from "./index";
+import { Header, Main } from "./index";
 
-export const Layout: React.FC = () => {
+export const Layout: React.FC = ({ children }) => {
     return (
         <>
             <Header />
