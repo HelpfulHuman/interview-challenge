@@ -1,0 +1,8 @@
+- [ ] Optimize font
+    - include in build?
+- [ ] Abstract search bar
+    - [ ] Move to it's own component
+    - [ ] Create search functionality
+- [ ] Style sidebar
+- [ ] Implement database
+    - [ ] Use array of colors first

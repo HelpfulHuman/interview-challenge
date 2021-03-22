@@ -1,6 +1,7 @@
 {
   "name": "colors",
   "dependencies": {
+    "@types/react": "^17.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "^4.0.3"
