@@ -7,7 +7,10 @@
     "react-scripts": "^4.0.3"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "semi": 1
+    }
   },
   "scripts": {
     "start": "react-scripts start",

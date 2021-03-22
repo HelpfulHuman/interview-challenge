@@ -9,5 +9,5 @@ export const Layout: React.FC = ({ children }) => {
                 {children}
             </Main>
         </>
-    )
-}
+    );
+};

@@ -1,8 +1,17 @@
-- [ ] Optimize font
-    - include in build?
+- [x] Style sidebar
+- [ ] Add detail view
+    - [ ] Type props
+- [ ] Add list view
+    - [ ] Pagination
+- [ ] Style PreviewCard
 - [ ] Abstract search bar
     - [ ] Move to it's own component
     - [ ] Create search functionality
-- [ ] Style sidebar
 - [ ] Implement database
     - [ ] Use array of colors first
+- [ ] Optimize font
+    - include in build?
+- [ ] Make CSS responsive
+    - [ ] Remove inline styling
+    - [ ] Add CSS file
+    - [ ] Add viewport css vars

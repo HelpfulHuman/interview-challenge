@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Sidebar } from "./Sidebar";
 
-export const Main: React.FC = () => {
+export const Main: React.FC = ({ children }) => {
     return (
         <>
             <Sidebar />
-            <div></div>
+            {children}
         </>
-    )
-}
+    );
+};

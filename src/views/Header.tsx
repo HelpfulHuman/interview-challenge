@@ -6,8 +6,8 @@ const HeaderStyle = {
     height: "100px",
     left: "0px",
     top: "0px",
-    backgroundColor: "#353d3d",
-}
+    backgroundColor: "#353d3d"
+};
 
 const InputStyle = {
     position: "absolute" as const,
@@ -22,12 +22,12 @@ const InputStyle = {
     fontSize: "1.5rem",
     fontFamily: "'Source Serif Pro', serif",
     paddingLeft: "1em"
-}
+};
 
 const SvgStyle = {
     postion: "absolute" as const,
     margin: "1.3em"
-}
+};
 
 export const Header: React.FC = () => {
     return (
@@ -43,4 +43,4 @@ export const Header: React.FC = () => {
             <input type="text" style={InputStyle} placeholder="Search" />
         </div >
     );
-}
+};
