@@ -1,16 +1,12 @@
-export enum ColorCategories {
-    Red = "Red",
-    Orange = "Orange",
-    Yellow = "Yellow",
-    Green = "Green",
-    Blue = "Blue",
-    Purple = "Purple",
-    Brown = "Brown",
-    Gray = "Gray"
-}
-
-export type Color = "red" | "orange" | "yellow" | "green" | "blue" | "purple" | "brown" | "gray";
-
 export type DetailState = string | null;
 
 export type GetAllColorsResponse = string[];
+
+export interface SidebarProps {
+    /** Callback to remove the detail color display from state */
+    clearDetail: () => void;
+    /** Maximum value of all colors array */
+    max: number;
+   /** Callback to set a random color in detail view */
+   setRandomColor: (num: number) => void;
+};
