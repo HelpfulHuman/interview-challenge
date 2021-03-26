@@ -1,0 +1,34 @@
+.sidebar {
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    top: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    background-color: #D6D8D8;
+}
+
+.random-color {
+    display: block;
+    margin: 80px auto 37px auto;
+    width: 280px;
+    height: 60px;
+    border: 1px solid #363C3C;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Source Serif Pro, serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.color-list {
+    list-style-type: none;
+    color: #363C3C;
+    font-family: Source Serif Pro, serif;
+    font-size: 2em;
+    line-height: 1em;
+    padding-left: 1em;
+}
+
+.color-list li {
+    padding-bottom: 18px;
+}
