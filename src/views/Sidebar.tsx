@@ -1,52 +1,41 @@
 import * as React from "react";
+import { useHistory } from "react-router-dom";
+import "./Sidebar.css";
 
-const SidebarStyle = {
-    position: "absolute" as const,
-    height: "100%",
-    width: "320px",
-    left: "0px",
-    top: "100px",
-    filter: "drop-shadow(0px 4px 4px rgba(0,0,0,0.25))",
-    backgroundColor: "#D6D8D8"
-};
+type SidebarProps = {
+    /** Callback to set a random color in detail view */
+    setRandomColor: (num: number) => void;
+    /** Maximum value of all colors array */
+    max: number;
+}
 
-const ButtonStyle = {
-    position: "absolute" as const,
-    borderRadius: "10px",
-    width: "260px",
-    height: "60px",
-    top: " 80px",
-    left: "30px",
-    fontFamily: "'Source Serif Pro', serif",
-    fontWeight: 600,
-    fontSize: "24px"
-};
-
-const ListStyle = {
-    position: "relative" as const,
-    listStyleType: "none",
-    top: "140px",
-    color: "#363C3C",
-    fontFamily: "'Source Serif Pro', serif",
-    fontSize: "28px",
-    lineHeight: "35px"
-};
-
-const ListItemStyle = {
-    paddingBottom: "0.5em"
-};
-
+/** Array to generate links from */
 const colors: string[] = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Brown", "Gray"];
 
-export const Sidebar: React.FC = () => {
+export const Sidebar: React.FC<SidebarProps> = ({ setRandomColor, max }) => {
+    const history = useHistory();
+
+    /** Callback to navigate colors */
+    const handleClick = (color: string) => {
+        history.push(`/${color.toLowerCase()}`);
+    }
+
+    /** Create a list of colors that will serve as links */
     const renderList = () => {
-        return colors.map((color, index) => <li style={ListItemStyle} key={index}>{color}</li>);
+        return colors.map((color, index) => <li key={index} onClick={(e) => handleClick(color)}>{color}</li>);
     };
+    
+    /** Method to randomly select a color for Detail view */
+    const generateRandomColor = () => {
+        const num = Math.floor(Math.random() * Math.floor(max))
+        history.push("/");
+        setRandomColor(num);
+    }
 
     return (
-        <div style={SidebarStyle}>
-            <button style={ButtonStyle}>Random Color</button>
-            <ul style={ListStyle}>{renderList()}</ul>
+        <div className="sidebar">
+            <button className="random-color" onClick={generateRandomColor}>Random Color</button>
+            <ul className="color-list">{renderList()}</ul>
         </div>
     );
 };
