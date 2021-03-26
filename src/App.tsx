@@ -1,9 +1,9 @@
 import * as React from "react"
 import { useQuery } from "react-query";
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
+  useHistory,
 } from "react-router-dom";
 import { Layout, Detail } from './views'
 import { 
@@ -21,6 +21,7 @@ export const App: React.FC = () => {
    * If false, display a paginated list of 12 colors
    */
   const [display, setDisplay] = React.useState<boolean>(false);
+  const history = useHistory();
   
   /** Color to display in detail view */
   const [detailColor, setDetailColor] = React.useState<DetailState>(null);
@@ -29,6 +30,7 @@ export const App: React.FC = () => {
 
   /** Callback to change views with clear button in detail view */
   const clearDetail = () => {
+    history.push("/")
     setDisplay(false);
     setDetailColor(null);
   }
@@ -54,7 +56,6 @@ export const App: React.FC = () => {
   }
 
   return (
-    <Router>
     <Layout setRandomColor={generateRandomColor} max={data!.length}>
       <Switch>
         <Route exact path="/">
@@ -65,10 +66,12 @@ export const App: React.FC = () => {
           }
         </Route>
         <Route path="/:color">
+        { display && detailColor ? 
+          <Detail color={detailColor} relatedColors={data!.slice(0,4)} setDetailColor={setDetailColor} changeDisplay={clearDetail} /> :
           <Category setDetail={toggleDetail} />
+        }
         </Route>
         </Switch>
     </Layout>
-    </Router>
   );
 }

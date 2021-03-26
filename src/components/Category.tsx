@@ -36,7 +36,7 @@ export const Category: React.FC<CategoryProps> = ({ setDetail }) => {
         return <NoRoute />
     }
 
-    if (isLoading) return <Loading />
+    if (isLoading) return <Loading />;
 
     if (error) return <>{`Error: ${error.message}.`}</>;
 
