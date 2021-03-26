@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import { fetchColor } from "../services/api";
 import { List } from "./List";
+import { Loading } from "./Loading";
 import { NoRoute } from "./NoRoute";
 
 type CategoryProps = {
@@ -35,7 +36,7 @@ export const Category: React.FC<CategoryProps> = ({ setDetail }) => {
         return <NoRoute />
     }
 
-    if (isLoading) return <>Loading...</>;
+    if (isLoading) return <Loading />
 
     if (error) return <>{`Error: ${error.message}.`}</>;
 

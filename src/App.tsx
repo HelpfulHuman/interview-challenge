@@ -6,11 +6,14 @@ import {
   Route,
 } from "react-router-dom";
 import { Layout, Detail } from './views'
-import { List} from './components'
+import { 
+  Category, 
+  List, 
+  Loading
+ } from './components';
 import { DetailState, GetAllColorsResponse } from "./services/types";
 import { fetchAllColors } from "./services/api";
 import "./App.css";
-import { Category } from './components/Category';
 
 export const App: React.FC = () => {
   /** Binary state determing view.
@@ -44,12 +47,10 @@ export const App: React.FC = () => {
     setDetailColor(hexCode);
   }
 
-  if (isLoading) {
-    return <>Loading....</>
-  };
+  if (isLoading) return <Loading />;
 
   if (isError && error) {
-    return <>Error: {error.message}</>
+    return <>Error: {error.message}</>;
   }
 
   return (
