@@ -56,7 +56,7 @@ export const App: React.FC = () => {
   }
 
   return (
-    <Layout setRandomColor={generateRandomColor} max={data!.length}>
+    <Layout setRandomColor={generateRandomColor} max={data!.length} clearDetail={clearDetail}>
       <Switch>
         <Route exact path="/">
           {

@@ -1,22 +1,17 @@
 import * as React from "react";
 import { useHistory } from "react-router-dom";
+import {SidebarProps } from "../services";
 import "./Sidebar.css";
-
-type SidebarProps = {
-    /** Callback to set a random color in detail view */
-    setRandomColor: (num: number) => void;
-    /** Maximum value of all colors array */
-    max: number;
-}
 
 /** Array to generate links from */
 const colors: string[] = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Brown", "Gray"];
 
-export const Sidebar: React.FC<SidebarProps> = ({ setRandomColor, max }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ clearDetail, max, setRandomColor }) => {
     const history = useHistory();
 
     /** Callback to navigate colors */
     const handleClick = (color: string) => {
+        clearDetail();
         history.push(`/${color.toLowerCase()}`);
     }
 

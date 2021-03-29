@@ -1,18 +1,14 @@
 import * as React from "react";
+import { SidebarProps } from "../services";
 import { Header,  Main } from "./index";
 
-type LayoutProps = {
-    /** Callback to set a random color in detail view */
-    setRandomColor: (num: number) => void;
-    /** Maximum value of all colors array */
-    max: number;
-}
+/** Layout props can be extended from sidebar props if necessary */
 
-export const Layout: React.FC<LayoutProps> = ({ children, max, setRandomColor }) => {
+export const Layout: React.FC<SidebarProps> = ({ clearDetail, children, max, setRandomColor }) => {
     return (
         <>
             <Header />
-            <Main setRandomColor={setRandomColor} max={max} >
+            <Main setRandomColor={setRandomColor} max={max} clearDetail={clearDetail}>
                 {children}
             </Main>
         </>
