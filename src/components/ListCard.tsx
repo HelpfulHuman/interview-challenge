@@ -12,9 +12,9 @@ type ListCardProps = {
 /** Card component to be displayed in the list view */
 export const ListCard: React.FC<ListCardProps> = ({ color, setDetail }) => {
   return (
-    <div className="card" onClick={(e) => setDetail(color)}>
-      <svg width="218" height="208.42">
-        <rect width="218" height="208.42" style={{ fill: color }} />
+    <div className="card" onClick={() => setDetail(color)}>
+      <svg width="100%" height="100%">
+        <rect width="100%" height="100%" style={{ fill: color }} />
       </svg>
       <p className="card-text">{color}</p>
     </div>

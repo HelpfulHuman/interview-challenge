@@ -33,3 +33,7 @@
 .color-list li {
   padding-bottom: 18px;
 }
+
+.color-list li span {
+  cursor: pointer;
+}

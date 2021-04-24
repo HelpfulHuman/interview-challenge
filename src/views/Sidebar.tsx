@@ -31,8 +31,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   /** Create a list of colors that will serve as links */
   const renderList = () => {
     return colors.map((color, index) => (
-      <li key={index} onClick={(e) => handleClick(color)}>
-        {color}
+      <li key={index} onClick={() => handleClick(color)}>
+        <span>{color}</span>
       </li>
     ));
   };

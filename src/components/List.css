@@ -12,8 +12,8 @@
 .col-2,
 .col-3 {
   display: inline-flex;
-  flex: 0 1 25%;
-  width: auto;
+  flex: 1 1 25%;
+  width: 100%;
   height: auto;
 }
 
