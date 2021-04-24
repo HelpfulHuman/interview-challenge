@@ -1,7 +1,7 @@
 .main {
-    position: absolute;
-    top: 100px;
-    left: 320px;
-    margin: 20px;
-    z-index: 0;
+  position: absolute;
+  top: 100px;
+  left: 320px;
+  margin: 20px;
+  z-index: 0;
 }

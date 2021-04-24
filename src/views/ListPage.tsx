@@ -5,22 +5,26 @@ import { chunk } from "lodash";
 
 type ListPageProps = {
   /** Array of 12 colors to create page from */
-    colors: string[];
-    /** Callback to set the selected color in detail view */
-    setDetail: (color: string) => void;
+  colors: string[];
+  /** Callback to set the selected color in detail view */
+  setDetail: (color: string) => void;
 };
 
 /** This component will display a paginated List */
 export const ListPage: React.FC<ListPageProps> = ({ colors, setDetail }) => {
-
   /** Create a card column and a break line to account for smaller viewports. */
   const createColumn = (colorArray: string[], index: number) => {
     return (
       <>
-        <CardColumn key={index} row={index} colors={colorArray} setDetail={setDetail} />
+        <CardColumn
+          key={index}
+          row={index}
+          colors={colorArray}
+          setDetail={setDetail}
+        />
         <div className="break" />
       </>
-      );
+    );
   };
 
   /** Create 4 columns to display on this view */
@@ -28,14 +32,10 @@ export const ListPage: React.FC<ListPageProps> = ({ colors, setDetail }) => {
     /** Create smaller arrays of 4 colors */
     const smallerArrays = chunk(colorArray, 4);
     /** Turn new arrays into columns */
-    return smallerArrays.map((arrayOfThree, index) => 
+    return smallerArrays.map((arrayOfThree, index) =>
       createColumn(arrayOfThree, index)
     );
   };
 
-  return (
-    <>
-      {renderPage(colors)}
-    </>
-  );
+  return <>{renderPage(colors)}</>;
 };

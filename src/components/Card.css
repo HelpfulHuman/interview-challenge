@@ -1,69 +1,69 @@
 .card {
-    border: 1px solid #FDFDFD;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
-    border-radius: 10px;
-    width: 220px;
-    height: 261px;
-    margin-bottom: 1em;
-    margin-right: 6em;
+  border: 1px solid #fdfdfd;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 220px;
+  height: 261px;
+  margin-bottom: 1em;
+  margin-right: 6em;
 }
 
 .card-text {
-    position: relative;
-    bottom: 0.5em;
-    left: 10.91%;
-    right: 58.18%;
-    font-family: Source Serif Pro, serif;
-    font-weight: 400;
-    font-size: 24px;
-    color: #363C3C;
+  position: relative;
+  bottom: 0.5em;
+  left: 10.91%;
+  right: 58.18%;
+  font-family: Source Serif Pro, serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #363c3c;
 }
 
 .jumbo-col {
-    color: #363C3C;
-    margin-bottom: 1em;
-    border: 1px solid #363C3C;
-    box-sizing: border-box;
-    border-radius: 10px;
+  color: #363c3c;
+  margin-bottom: 1em;
+  border: 1px solid #363c3c;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
-.jumbo-text{
-    color: #363C3C;
-    margin-left: 1em;
-    font-size: 3em;
-    font-weight: 400;
-    font-family: Source Serif Prop, serif;
+.jumbo-text {
+  color: #363c3c;
+  margin-left: 1em;
+  font-size: 3em;
+  font-weight: 400;
+  font-family: Source Serif Prop, serif;
 }
 
 .mini-col {
-    display: inline-flex;
-    margin-bottom: 1em;
+  display: inline-flex;
+  margin-bottom: 1em;
 }
 
 .mini-card {
-    border: 1px solid #363C3C;
-    box-sizing: border-box;
-    border-radius: 10px;
-    margin: 0px 20px 0px 20px;
+  border: 1px solid #363c3c;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0px 20px 0px 20px;
 }
 
 .mini-text {
-    margin-left: 1em;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: #363C3C;
+  margin-left: 1em;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #363c3c;
 }
 
 .clear {
-    display: block;
-    margin: 0 auto;
-    font-family: Source Serif Pro, serif;
-    font-weight: 700;
-    font-size: 24px;
-    width: 260px;
-    height: 60px;
-    border: 1px solid #363C3C;
-    box-sizing: border-box;
-    border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  font-family: Source Serif Pro, serif;
+  font-weight: 700;
+  font-size: 24px;
+  width: 260px;
+  height: 60px;
+  border: 1px solid #363c3c;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
