@@ -1,9 +1,8 @@
 .mini-col {
   display: inline-flex;
-  flex: 1 1 25%;
+  flex: 1 1 100%;
   width: 100%;
   height: auto;
-  margin-bottom: 1em;
 }
 
 .mini-card {

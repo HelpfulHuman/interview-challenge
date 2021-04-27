@@ -52,7 +52,7 @@ export const List: React.FC<ListProps> = ({ colorArray, setDetail }) => {
 
   /** Create smaller arrays of 12, and display current page selection */
   const renderListPages = (originalColorArray: string[]) => {
-    // 1. Break array into smaller arrays of 12
+    // 1. Chunk array into smaller arrays of 12
     const chunks = chunk(originalColorArray, 12);
     // 2. Pass the currently displayed array to PageList
     return createPage(chunks[currentPage]);

@@ -10,7 +10,7 @@
 
 .random-color {
   display: block;
-  margin: 80px auto 37px auto;
+  margin: 1em;
   width: 280px;
   height: 60px;
   border: 1px solid #363c3c;
@@ -31,7 +31,7 @@
 }
 
 .color-list li {
-  padding-bottom: 18px;
+  padding-bottom: 1em;
 }
 
 .color-list li span {

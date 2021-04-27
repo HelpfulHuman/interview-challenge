@@ -32,12 +32,12 @@ export const Detail: React.FC<DetailProps> = ({
   return (
     <>
       <JumboCard color={color} />
-      <div className="break" />
       <div className="mini-col">{renderMiniCards()}</div>
-      <div className="break" />
-      <button className="clear" onClick={changeDisplay}>
-        Clear
-      </button>
+      <div className="mini-col">
+        <button className="clear" onClick={changeDisplay}>
+          Clear
+        </button>
+      </div>
     </>
   );
 };

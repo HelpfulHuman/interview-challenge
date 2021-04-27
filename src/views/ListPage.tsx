@@ -12,7 +12,7 @@ type ListPageProps = {
 
 /** This component will display a paginated List */
 export const ListPage: React.FC<ListPageProps> = ({ colors, setDetail }) => {
-  /** Create a card column and a break line to account for smaller viewports. */
+  /** Create a card column. */
   const createColumn = (colorArray: string[], index: number) => {
     return (
       <>
@@ -22,7 +22,6 @@ export const ListPage: React.FC<ListPageProps> = ({ colors, setDetail }) => {
           colors={colorArray}
           setDetail={setDetail}
         />
-        <div className="break" />
       </>
     );
   };

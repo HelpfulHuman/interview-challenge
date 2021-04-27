@@ -1,9 +1,9 @@
 .jumbo-col {
   display: inline-flex;
-  flex: 1 1 25%;
+  flex: 1 1 100%;
   width: 100%;
   height: auto;
-  min-height: 30vh;
+  min-height: 45vh;
 }
 
 .jumbo-card {
@@ -13,13 +13,13 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  margin: 1em 1em;
+  /* margin: 1em; */
 }
 
 .jumbo-card svg {
-  min-height: 30vh;
+  min-height: 45vh;
 }
 
 .jumbo-card rect {
-  min-height: 30vh;
+  min-height: 45vh;
 }
