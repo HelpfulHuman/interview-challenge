@@ -22,7 +22,7 @@ export const App: React.FC = () => {
   const { isLoading, isError, error, data } = useQuery<
     GetAllColorsResponse,
     Error
-  >("allColors", fetchAllColors);
+  >("allColors", fetchAllColors, { retry: false });
 
   /** Callback to change views with clear button in detail view */
   const clearDetail = () => {
@@ -48,7 +48,15 @@ export const App: React.FC = () => {
   if (isLoading) return <Loading />;
 
   if (isError && error) {
-    return <>Error: {error.message}</>;
+    return (
+      <Layout
+        clearDetail={clearDetail}
+        max={0}
+        setRandomColor={generateRandomColor}
+      >
+        <h1>Error: {error.message}</h1>
+      </Layout>
+    );
   }
 
   return (

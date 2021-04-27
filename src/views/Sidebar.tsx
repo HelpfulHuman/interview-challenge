@@ -39,6 +39,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   /** Method to randomly select a color for Detail view */
   const generateRandomColor = () => {
+    if (max === 0) return;
     const num = Math.floor(Math.random() * Math.floor(max));
     history.push("/");
     setRandomColor(num);
