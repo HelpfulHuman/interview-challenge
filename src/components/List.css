@@ -1,5 +1,4 @@
 .flex-grid {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   padding: 1em;
@@ -29,6 +28,10 @@
   font-family: Source Serif Pro, serif;
   font-size: 24px;
   margin-bottom: 1em;
+}
+
+.page-list-item span {
+  cursor: pointer;
 }
 
 .active {

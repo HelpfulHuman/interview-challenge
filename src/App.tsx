@@ -6,6 +6,7 @@ import { Category, List, Loading } from "./components";
 import { DetailState, GetAllColorsResponse } from "./services/types";
 import { fetchAllColors } from "./services/api";
 import "./App.css";
+import "./components/Card.css";
 
 export const App: React.FC = () => {
   /** Binary state determing view.

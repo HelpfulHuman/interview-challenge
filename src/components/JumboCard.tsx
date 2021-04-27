@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./JumboCard.css";
 
 type JumboCardProps = {
   /** Color to display in jumbotron card */
@@ -9,10 +10,12 @@ type JumboCardProps = {
 export const JumboCard: React.FC<JumboCardProps> = ({ color }) => {
   return (
     <div className="jumbo-col">
-      <svg width="1040px" height="552px">
-        <rect width="1040px" height="552px" style={{ fill: color }} />
-      </svg>
-      <p className="jumbo-text">{color}</p>
+      <div className="jumbo-card">
+        <svg width="100%" height="100%">
+          <rect width="100%" height="100%" style={{ fill: color }} />
+        </svg>
+        <p className="card-text">{color}</p>
+      </div>
     </div>
   );
 };

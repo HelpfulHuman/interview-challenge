@@ -42,7 +42,7 @@ export const List: React.FC<ListProps> = ({ colorArray, setDetail }) => {
             i === currentPage ? "page-list-item active" : "page-list-item"
           }
         >
-          {pageNumberToDisplay}
+          <span>{pageNumberToDisplay}</span>
         </li>
       );
     }

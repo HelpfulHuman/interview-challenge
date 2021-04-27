@@ -1,5 +1,6 @@
 import * as React from "react";
 import { DetailState } from "../services";
+import "./MiniCard.css";
 
 type MiniCardProps = {
   /** Color to display */
@@ -14,11 +15,11 @@ export const MiniCard: React.FC<MiniCardProps> = ({
   setDetailColor,
 }) => {
   return (
-    <div className="mini-card" onClick={(e) => setDetailColor(color)}>
-      <svg width="175" height="175">
-        <rect width="175" height="175" style={{ fill: color }} />
+    <div className="mini-card" onClick={() => setDetailColor(color)}>
+      <svg width="100%" height="100%">
+        <rect width="100%" height="100%" style={{ fill: color }} />
       </svg>
-      <p className="mini-text">{color}</p>
+      <p className="card-text mini">{color}</p>
     </div>
   );
 };
