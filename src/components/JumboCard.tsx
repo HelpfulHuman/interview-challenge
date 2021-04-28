@@ -9,12 +9,12 @@ type JumboCardProps = {
 /** Create a large SVG to display in the detail view */
 export const JumboCard: React.FC<JumboCardProps> = ({ color }) => {
   return (
-    <div className="jumbo-col">
-      <div className="jumbo-card">
+    <div className="jumbo col">
+      <div className="jumbo card">
         <svg width="100%" height="100%">
           <rect width="100%" height="100%" style={{ fill: color }} />
         </svg>
-        <p className="card-text">{color}</p>
+        <p className="jumbo card-text">{color}</p>
       </div>
     </div>
   );

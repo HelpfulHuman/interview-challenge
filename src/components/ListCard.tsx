@@ -13,7 +13,7 @@ type ListCardProps = {
 export const ListCard: React.FC<ListCardProps> = ({ color, setDetail }) => {
   return (
     <div className="card" onClick={() => setDetail(color)}>
-      <svg width="100%" height="100%">
+      <svg width="100%" height="80%">
         <rect width="100%" height="100%" style={{ fill: color }} />
       </svg>
       <p className="card-text">{color}</p>

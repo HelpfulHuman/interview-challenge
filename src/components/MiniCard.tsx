@@ -15,8 +15,8 @@ export const MiniCard: React.FC<MiniCardProps> = ({
   setDetailColor,
 }) => {
   return (
-    <div className="mini-card" onClick={() => setDetailColor(color)}>
-      <svg width="100%" height="100%">
+    <div className="mini card" onClick={() => setDetailColor(color)}>
+      <svg width="100%" height="80%">
         <rect width="100%" height="100%" style={{ fill: color }} />
       </svg>
       <p className="card-text mini">{color}</p>

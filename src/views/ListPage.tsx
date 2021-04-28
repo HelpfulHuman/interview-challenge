@@ -16,12 +16,7 @@ export const ListPage: React.FC<ListPageProps> = ({ colors, setDetail }) => {
   const createColumn = (colorArray: string[], index: number) => {
     return (
       <>
-        <CardColumn
-          key={index}
-          row={index}
-          colors={colorArray}
-          setDetail={setDetail}
-        />
+        <CardColumn key={index} colors={colorArray} setDetail={setDetail} />
       </>
     );
   };

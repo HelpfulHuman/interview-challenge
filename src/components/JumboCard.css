@@ -1,25 +1,15 @@
-.jumbo-col {
-  display: inline-flex;
-  flex: 1 1 100%;
-  width: 100%;
+.jumbo.col {
   height: auto;
+}
+
+.jumbo.card-text {
+  margin: 0.5em;
+}
+
+.jumbo svg {
   min-height: 45vh;
 }
 
-.jumbo-card {
-  border: 1px solid #363c3c;
-  border-radius: 10px;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  /* margin: 1em; */
-}
-
-.jumbo-card svg {
-  min-height: 45vh;
-}
-
-.jumbo-card rect {
+.jumbo rect {
   min-height: 45vh;
 }
