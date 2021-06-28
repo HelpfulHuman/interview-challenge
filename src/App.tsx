@@ -1,28 +1,29 @@
 import * as React from "react";
 import { useQuery } from "react-query";
-import { Switch, Route, useHistory } from "react-router-dom";
-import { Layout, Detail } from "./views";
-import { Category, List, Loading } from "./components";
+import { useHistory } from "react-router-dom";
+import { Layout, List } from "./views";
 import { DetailState, GetAllColorsResponse } from "./services/types";
 import { fetchAllColors } from "./services/api";
+import chunk from "lodash.chunk";
 import "./App.css";
-import "./components/Card.css";
 
 export const App: React.FC = () => {
+  const history = useHistory();
+  const [currentPage, setCurrentPage] = React.useState<number>(0);
   /** Binary state determing view.
    * If true, display a detailed color view
    * If false, display a paginated list of 12 colors
    */
   const [display, setDisplay] = React.useState<boolean>(false);
-  const history = useHistory();
 
   /** Color to display in detail view */
   const [detailColor, setDetailColor] = React.useState<DetailState>(null);
 
-  const { isLoading, isError, error, data } = useQuery<
-    GetAllColorsResponse,
-    Error
-  >("allColors", fetchAllColors, { retry: false });
+  const { isError, error, data } = useQuery<GetAllColorsResponse, Error>(
+    "allColors",
+    fetchAllColors,
+    { retry: false }
+  );
 
   /** Callback to change views with clear button in detail view */
   const clearDetail = () => {
@@ -39,13 +40,39 @@ export const App: React.FC = () => {
     toggleDetail(data![num]);
   };
 
+  const pageCount = data && data.length / 12;
+  const colorChunks = chunk(data, 12);
+
+  function jumpToPage(pageNumber: number) {
+    setCurrentPage(pageNumber);
+  }
+
+  function renderPageLinks() {
+    const itemArray = [];
+    for (let i = 0; i < pageCount!; i++) {
+      const pageNumberToDisplay = i + 1;
+
+      itemArray.push(
+        <li
+          onClick={() => jumpToPage(i)}
+          className={
+            i === currentPage ? "page-list-item active" : "page-list-item"
+          }
+          key={i}
+        >
+          <span>{pageNumberToDisplay}</span>
+        </li>
+      );
+    }
+
+    return itemArray;
+  }
+
   /** Callback to set a color as the detail view */
   const toggleDetail = (hexCode: string) => {
     setDisplay(true);
     setDetailColor(hexCode);
   };
-
-  if (isLoading) return <Loading />;
 
   if (isError && error) {
     return (
@@ -59,38 +86,25 @@ export const App: React.FC = () => {
     );
   }
 
-  return (
-    <Layout
-      setRandomColor={generateRandomColor}
-      max={data!.length}
-      clearDetail={clearDetail}
-    >
-      <Switch>
-        <Route exact path="/">
-          {display && detailColor ? (
-            <Detail
-              color={detailColor}
-              relatedColors={data!.slice(0, 4)}
+  if (data) {
+    return (
+      <Layout
+        setRandomColor={generateRandomColor}
+        max={data.length}
+        clearDetail={clearDetail}
+      >
+        {pageCount && pageCount > 1 && (
+          <>
+            <List
+              colors={colorChunks[currentPage]}
               setDetailColor={setDetailColor}
-              changeDisplay={clearDetail}
             />
-          ) : (
-            <List setDetail={toggleDetail} colorArray={data!} />
-          )}
-        </Route>
-        <Route path="/:color">
-          {display && detailColor ? (
-            <Detail
-              color={detailColor}
-              relatedColors={data!.slice(0, 4)}
-              setDetailColor={setDetailColor}
-              changeDisplay={clearDetail}
-            />
-          ) : (
-            <Category setDetail={toggleDetail} />
-          )}
-        </Route>
-      </Switch>
-    </Layout>
-  );
+            <ul className="page-list">{renderPageLinks()}</ul>
+          </>
+        )}
+      </Layout>
+    );
+  }
+
+  return <>Loading</>;
 };

@@ -1,22 +1,9 @@
 import * as React from "react";
-import { Sidebar } from "./Sidebar";
-import { SidebarProps } from "../services";
-import "./Main.css";
 
-export const Main: React.FC<SidebarProps> = ({
-  clearDetail,
-  children,
-  max,
-  setRandomColor,
-}) => {
-  return (
-    <>
-      <Sidebar
-        setRandomColor={setRandomColor}
-        max={max}
-        clearDetail={clearDetail}
-      />
-      <div className="main flex-grid">{children}</div>
-    </>
-  );
+/**
+ * This component is going to render all the cards
+ * And contain the logic for displaying a detailed view if we are
+ */
+export const Main: React.FC = ({ children }) => {
+  return <div className="main">{children}</div>;
 };

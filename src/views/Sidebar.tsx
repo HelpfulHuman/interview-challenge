@@ -31,9 +31,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
   /** Create a list of colors that will serve as links */
   const renderList = () => {
     return colors.map((color, index) => (
-      <li key={index} onClick={() => handleClick(color)}>
-        <span>{color}</span>
-      </li>
+      <span key={index} onClick={() => handleClick(color)}>
+        {color}
+      </span>
     ));
   };
 
@@ -50,7 +50,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <button className="random-color" onClick={generateRandomColor}>
         Random Color
       </button>
-      <ul className="color-list">{renderList()}</ul>
+      {renderList()}
     </div>
   );
 };

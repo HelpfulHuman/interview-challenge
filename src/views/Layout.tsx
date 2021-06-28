@@ -1,6 +1,7 @@
 import * as React from "react";
+import { Header, Main, Sidebar } from "./index";
 import { SidebarProps } from "../services";
-import { Header, Main } from "./index";
+import "./Layout.css";
 
 /** Layout props can be extended from sidebar props if necessary */
 
@@ -11,11 +12,14 @@ export const Layout: React.FC<SidebarProps> = ({
   setRandomColor,
 }) => {
   return (
-    <>
+    <div className="layout">
       <Header />
-      <Main setRandomColor={setRandomColor} max={max} clearDetail={clearDetail}>
-        {children}
-      </Main>
-    </>
+      <Sidebar
+        setRandomColor={setRandomColor}
+        max={max}
+        clearDetail={clearDetail}
+      />
+      <Main>{children}</Main>
+    </div>
   );
 };
