@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./Header.css";
 
 export const Header: React.FC = () => {
   return (

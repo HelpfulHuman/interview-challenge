@@ -1,9 +1,9 @@
-/** Remove auto margins */
-body {
+body,
+html {
   margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 
-/** Set all svg's with a rounded top border */
 svg {
   border-radius: 10px 10px 0px 0px;
 }
